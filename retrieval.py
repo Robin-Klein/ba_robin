@@ -31,7 +31,6 @@ def retrieve(args):
 
             rankings = []
             ret_list = []
-            print("4----------------------------------------------------------------")
             for query_idx, q in enumerate(qbatch_text):
                 torch.cuda.synchronize('cuda:0')
                 s = time.time()
@@ -47,7 +46,6 @@ def retrieve(args):
                           milliseconds / (qoffset+query_idx+1), 'ms')
 
                 rankings.append(zip(pids, scores))
-            print("5----------------------------------------------------------------")
             for query_idx, (qid, ranking) in enumerate(zip(qbatch, rankings)):
                 query_idx = qoffset + query_idx
 
