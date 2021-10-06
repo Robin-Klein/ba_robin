@@ -12,4 +12,4 @@ Initialisiert ein ColBERT Modell und ruft die retrieval Funktion flexibel auf, s
 
 ### ranking_tsv_transformer.py
 
-Liest den Output von ColBERT (ranking.tsv) ein und bringt sie in die für ARQMath benötigte Form. Z.B. müssen die Ids um eins erhöht werden und "A." muss zu Beginn stehen. Ebenso wird der Run hinzugefügt und die Ids mit der id_translater.npy zurück übersetzt.
+Liest den Output von ColBERT (ranking.tsv) ein und bringt sie in die für ARQMath benötigte Form. Z.B. müssen die Ids um eins erhöht werden und "A." muss zu Beginn stehen. Ebenso wird der Run hinzugefügt und die Ids mit der id_translater.npy zurück übersetzt. Es werden ebenfalls alle queries entfernt, die nicht evaluiert wurden und damit nicht in die Bewertung einfließen.
